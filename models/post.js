@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const PostSchema = new mongoose.Schema({
     id: {
-        type: int,
+        type: Number,
         required: true,
     },
     avatar: {
