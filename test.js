@@ -5,6 +5,8 @@ const cors = require('cors')
 const passport = require('./config/passwordConfig')
 const postRoutes = require('./routes/postRoutes');
 const userRoutes = require('./routes/userRoutes');
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
 
 
 const connection = 'mongodb+srv://larisa:userlarisa@cluster0.rbh92.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
