@@ -3,6 +3,8 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const postRoutes = require('./routes/postRoutes');
+const userRoutes = require('./routes/userRoutes');
+
 
 const connection = 'mongodb+srv://larisa:userlarisa@cluster0.rbh92.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const port = process.env.PORT || 3001;
@@ -12,6 +14,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(postRoutes);
+app.use(userRoutes);
 
 mongoose.connect(connection, {
     useNewUrlParser: true,
